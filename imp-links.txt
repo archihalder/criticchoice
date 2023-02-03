@@ -1,0 +1,8 @@
+Imp links
+
+https://stackoverflow.com/questions/17628305/windows-git-warning-lf-will-be-replaced-by-crlf-is-that-warning-tail-backwar
+
+https://docs.github.com/en/repositories/working-with-files/managing-large-files
+
+https://git-lfs.com/
+
