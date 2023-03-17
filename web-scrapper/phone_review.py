@@ -8,7 +8,7 @@ import url
 def phone_review_generator():
     st.markdown("<h1 style='text-align: center'> Phone Review Generator</h1>",
                 unsafe_allow_html=True)
-    phone_brand = st.selectbox("Brand Name: ", ["Select a brand", "Apple", "Samsung"])
+    phone_brand = st.selectbox("Brand Name: ", ["Select a brand", "Apple", "Samsung", "OnePlus", "Xiaomi", "Motorola"])
 
     if phone_brand == "Select a brand":
         pass
@@ -19,6 +19,12 @@ def phone_review_generator():
                 model_name.append("iphone " + key)
             elif phone_brand == "Samsung":
                 model_name.append("galaxy " + key)
+            elif phone_brand == "OnePlus":
+                model_name.append("oneplus " + key)
+            elif phone_brand == "Xiaomi":
+                model_name.append(key)
+            elif phone_brand == "Motorola":
+                model_name.append("motorola " + key)
             model_id.append(val)
 
         model_name.insert(0, "Select a model")
