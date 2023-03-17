@@ -31,11 +31,46 @@ brands = {
         "f41": 97664,
         "m31": 91382
     },
-    "OnePlus":[],
-    "Xiaomi":[],
-    "Google":[],
-    "Motorola":[],
-    "Asus":[]
+    "OnePlus":{
+        "10 pro": 104498,
+        "9rt": 103968,
+        "9 pro": 100444,
+        "9": 100436,
+        "8t": 97112,
+        "nord": 94030,
+        "8": 91438,
+        "8 pro": 91433,
+        "7t pro": 91056,
+        "7t" : 91057,
+        "7 pro" : 13029,
+        "6t" : 5667,
+        "6" : 4655
+    },
+    "Xiaomi":{
+        "xiaomi 11t pro": 103959,
+        "xiaomi mi 11 ultra": 100437,
+        "xiaomi mi 10": 91386,
+        "redmi note 12 pro plus": 107931,
+        "redmi note 12 pro": 107921,
+        "redmi note 11 pro plus 5g": 106376,
+        "redmi note 11 pro": 105454,
+        "redmi note 11": 105453,
+        "redmi note 7 pro": 11984,
+        "redmi note 5 pro": 4607,
+    },
+    "Motorola":{
+        "edge 30 pro": 106230,
+        "edge 30 fusion": 112929,
+        "moto g82": 108284,
+        "moto g72": 113490,
+        "moto g71": 104545,
+        "moto g62 5g": 109809,
+        "moto g52": 107175,
+        "moto g51 5g": 104384,
+        "moto g42": 109853,
+        "moto g32": 111640,
+        "moto g22": 106416,
+    },
 }
 
 
