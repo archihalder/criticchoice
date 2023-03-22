@@ -5,7 +5,7 @@ import sentiment_score as ss
 
 
 def intro():
-    st.markdown("<h1 style='text-align: center'> Movie Review Generator</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center'> CinemaSense </h1>", unsafe_allow_html=True)
     movie_name = st.text_input("Enter a movie name")
     movie_name = movie_name.lower()
     movie_name = movie_name.replace(' ', '_')

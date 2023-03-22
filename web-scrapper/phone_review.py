@@ -7,7 +7,7 @@ import url
 
 def intro():
     res = []
-    st.markdown("<h1 style='text-align: center'> Phone Review Generator</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center'> PhoneInsight </h1>", unsafe_allow_html=True)
     phone_brand = st.selectbox("Brand Name: ", ["Select a brand", "Apple", "Samsung", "OnePlus", "Xiaomi", "Motorola"])
 
     if phone_brand == "Select a brand":
