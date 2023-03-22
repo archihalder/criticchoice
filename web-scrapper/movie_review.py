@@ -4,13 +4,34 @@ import requests
 import sentiment_score as ss
 
 
-def movie_review_generator():
-    st.markdown("<h1 style='text-align: center'> Movie Review Generator</h1>",
-                unsafe_allow_html=True)
+def intro():
+    st.markdown("<h1 style='text-align: center'> CinemaSense </h1>", unsafe_allow_html=True)
     movie_name = st.text_input("Enter a movie name")
     movie_name = movie_name.lower()
     movie_name = movie_name.replace(' ', '_')
+    return movie_name
 
+
+def movie_info(movie_name):
+    html = requests.get(f"https://www.rottentomatoes.com/m/{movie_name}").text
+    soup = BeautifulSoup(html, 'lxml')
+
+    all_info = soup.find_all('li', class_='info-item')
+    labels = ['Rating', 'Genre', 'Director', 'Producer', 'Runtime']
+    di = {}
+    for info_data in all_info:
+        category = info_data.find('b').text[:-1]
+        if category in labels:
+            category_data = info_data.find('span', class_="info-item-value").text.split()
+            di[category] = category_data
+
+    if di:
+        st.subheader("Movie Info")
+        for key, val in di.items():
+            st.write(f"{key}: {' '.join(val)}")
+
+
+def movie_review_generator(movie_name):
     critic_reviews, audience_reviews = [], []
 
     # scrapper
