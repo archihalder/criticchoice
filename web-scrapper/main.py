@@ -7,9 +7,10 @@ st.sidebar.title("Choose the product")
 product = st.sidebar.selectbox("Product Type", ["Select a product", "Movies", "Phones"])
 
 if product == "Movies":
-    mr.intro()
-    mr.movie_info()
-    mr.movie_review_generator()
+    name = mr.intro()
+    if name:
+        mr.movie_info(name)
+        mr.movie_review_generator(name)
 elif product == "Phones":
     data = pr.intro()
     if data:

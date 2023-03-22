@@ -3,18 +3,16 @@ from bs4 import BeautifulSoup
 import requests
 import sentiment_score as ss
 
-movie_name = str()
-
 
 def intro():
     st.markdown("<h1 style='text-align: center'> Movie Review Generator</h1>", unsafe_allow_html=True)
-    global movie_name
     movie_name = st.text_input("Enter a movie name")
     movie_name = movie_name.lower()
     movie_name = movie_name.replace(' ', '_')
+    return movie_name
 
 
-def movie_info():
+def movie_info(movie_name):
     html = requests.get(f"https://www.rottentomatoes.com/m/{movie_name}").text
     soup = BeautifulSoup(html, 'lxml')
 
@@ -33,7 +31,7 @@ def movie_info():
             st.write(f"{key}: {' '.join(val)}")
 
 
-def movie_review_generator():
+def movie_review_generator(movie_name):
     critic_reviews, audience_reviews = [], []
 
     # scrapper
