@@ -1,7 +1,7 @@
 import streamlit as st
 import nltk
+nltk.download('vader_lexicon')
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
-nltk.data.path.append('../dwnld_nltk_data')
 
 
 def review_score(reviews):
