@@ -52,7 +52,7 @@ def movie_review_generator(movie_name):
     ar_row = audience_soup.find_all('div', class_='review-text-container')
     for ar in ar_row:
         audience_quote = ar.find(
-            'p', class_='audience-reviews__review js-review-text clamp clamp-8 js-clamp').text.strip()
+            'p', class_='audience-reviews__review js-review-text').text.strip()
         audience_reviews.append(audience_quote)
 
     if critic_reviews and audience_reviews:
